@@ -6,7 +6,7 @@ from .models import Product
 def index(request):
     user = "tom"
     products_num = 4
-    products = Product.objects.all()
+    products = Product.objects.all()[:4]
     
     return render(request, "products/home.html",{
         "name":user,
@@ -17,7 +17,7 @@ def index(request):
 def signup(request):
     return render(request, "products/signup.html")
 
-def product_cat(request,product):
+def product_cat(request, product):
     if(product == "suit" or product == "dresses" or product == "shirts" or product == "shoes"):
         return HttpResponse(f"Here is the list of {product}!")
     else:
