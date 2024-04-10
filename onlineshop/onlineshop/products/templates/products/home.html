@@ -30,52 +30,23 @@
     </div>
 
     <main id = "product-intro">
-        <div class = "product-card">
-            <div class = "review-con"><p>Reviews 4.8🌟</p></div>
-            <img src="{% static "products/img/suit-1.png" %}" class="product-img" >
-            <div style="padding: 20px 25px;">
-                <h3>Product Title</h3>
-                <p> the product is as above. Blue suits with two button</p>
-                <a href="">View Product</a>
+        {% for product in products %}
+            <div class = "product-card">
+                <div class = "review-con"><p>Reviews 4.8🌟</p></div>
+                <img src="{% static "products/img/suit-1.png" %}" class="product-img" >
+                <div style="padding: 20px 25px;">
+                    <h3>{{product.title}}</h3>
+                    <p> {{product.description}}</p>
+                    <a href="">View Product</a>
+                </div>
             </div>
-        </div>
-    
-        <div class = "product-card">
-            <img src="{% static "products/img/suit-2.png" %}" class="product-img">
-            <div style="padding: 20px 25px;">
-                <h3>Product Title</h3>
-                <p> the product is as above. Blue suits with two button</p>
-                <a href="">View Product</a>
-            </div>
-        </div>
-    
-        <div class = "product-card">
-            <img src="{% static "products/img/suit-3.png" %}" class="product-img">
-            <div style="padding: 20px 25px;">
-                <h3>Product Title</h3>
-                <p> the product is as above. Blue suits with two button</p>
-                <a href="">View Product</a>
-            </div>
-        </div>
-    
-        <div class = "product-card">
-            <img src="{% static "products/img/suit-4.png" %}" class="product-img">
-            <div style="padding: 20px 25px;">
-                <h3>Product Title</h3>
-                <p> the product is as above. Blue suits with two button</p>
-                <a href="">View Product</a>
-            </div>
-        </div>
+        {% endfor %}
+        
     </main>
-    <form>
-        <input placeholder="firstname" id = "fn">
-        <input placeholder="lastname" id = "ln">
-        <button type = "button" onclick = "submitForm()">submit</button>
-    </form>
-    <h2 id = 'displaytitle'>This is My  Title</h2>
+   
     <!-- *********************** Footer **************************-->
 
     <footer>
-        <p>duck foot really cute!</p>
+        <p>This is the footer</p>
     </footer>
 {% endblock %}
