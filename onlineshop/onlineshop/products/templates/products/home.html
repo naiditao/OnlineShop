@@ -41,7 +41,7 @@
                         <p>{{product.brand.title}}</p>
                     {% endif %}
                     <img width = "100" src = "{{product.brand.logo.url}}">
-                    <a href="">View Product</a>
+                    <a href="{% url "product_page" product.brand.title product.slug %}">View Product</a>
                 </div>
             </div>
         {% endfor %}

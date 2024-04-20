@@ -22,3 +22,9 @@ def product_cat(request, product):
         return HttpResponse(f"Here is the list of {product}!")
     else:
         return HttpResponse("The page doesn't exist!")
+
+def product_page(request,product_brand,product_slug):
+    product = Product.objects.get(slug = product_slug)
+    return render(request, "products/product.html", {
+        "product": product
+    })

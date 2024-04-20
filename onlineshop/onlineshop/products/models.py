@@ -37,6 +37,7 @@ class Product(models.Model):
     description = models.TextField()
     slug = models.SlugField(blank = True)
     is_bestseller = models.BooleanField(default = False)
+    suggestions = models.ManyToManyField('self')
 
     def __str__(self):
         return f"{self.title} ${self.price}"

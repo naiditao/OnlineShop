@@ -1,0 +1,83 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin :5px
+}
+
+/*---------------------- Navigation Bar ----------------------*/
+header{
+    display: flex; 
+    padding: 10px;
+    justify-content: space-between;
+    background-color: #DBABBE;
+    height:70px;
+}
+
+header img{
+    padding-top: 12px;
+}
+
+.main-nav{
+    padding: 10px;
+    display: flex;
+    column-gap: 20px;
+}
+.main-nav a{
+    font-size: 30px;
+    font-family:cursive;
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    padding-top: 5px;
+}
+.main-nav a:hover{
+    color:#84596B;
+}
+
+#signup_bar{color: #84596B;}
+
+header svg:hover{
+    cursor: pointer;
+}
+
+#moon-icon{
+    display:none;
+}
+
+/*---------------------- Product Info ----------------------*/
+
+#product-main-con{
+    width: 1000px;
+    margin: 50px auto;
+
+}
+
+#product-main-con main{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    column-gap: 40px;
+}
+
+#product-main-con button{
+    background-color: #DBABBE;
+    font-size: 20px;
+    color:white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+
+#product-main-con button:hover{
+    background-color:#bc95a5;
+    transition-duration: 0.3s;
+}
+
+#feedback{
+    padding: 30px;
+    background-color: #ecc9d7;
+    border-radius: 20px;
+    margin-top: 70px;
+}
