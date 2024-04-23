@@ -70,7 +70,7 @@ header svg:hover{
 
 }
 
-#product-main-con button:hover{
+#product-main-con main button:hover{
     background-color:#bc95a5;
     transition-duration: 0.3s;
 }
@@ -80,4 +80,39 @@ header svg:hover{
     background-color: #ecc9d7;
     border-radius: 20px;
     margin-top: 70px;
+}
+
+/*---------------------- Feedback Form ----------------------*/
+
+#feedback input, #feedback textarea{
+    width: 97%;
+    display: block;
+    font-size: 18px;
+    padding: 7px 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 15px;
+}
+
+#feedback label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+#feedback button{
+    border: none;
+    border-radius: 15px;
+    background-color: #DBABBE;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 30px;
+    width: 20%;
+    cursor: pointer;
+    transition-duration: 0.3s;
+
+}
+
+#feedback button:hover{
+    background-color:#bc95a5;
 }

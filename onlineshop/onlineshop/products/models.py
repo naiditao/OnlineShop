@@ -46,3 +46,13 @@ class Product(models.Model):
         super().save(*args, **kwargs)
         self.slug = self.id
         super().save(*args, **kwargs)
+    
+class Feedback(models.Model):
+    name = models.CharField(max_length = 40)
+    email = models.EmailField()
+    rating = models.IntegerField()
+    product = models.ForeignKey(Product, on_delete = models.CASCADE)
+    text = models.TextField(max_length = 300)
+
+    def __str__(self) -> str:
+        return f"{self.product} - Rating {self.rating}"
