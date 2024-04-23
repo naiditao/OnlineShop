@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Product, Brand
+from django.contrib import messages
+from .forms import FeedbackForm
 # Create your views here.
 
 def index(request):
@@ -25,6 +27,24 @@ def product_cat(request, product):
 
 def product_page(request,product_brand,product_slug):
     product = Product.objects.get(slug = product_slug)
-    return render(request, "products/product.html", {
-        "product": product
-    })
+    form = FeedbackForm()
+
+    if request.method == "GET":
+        return render(request, "products/product.html", {
+            "product": product,
+            "form":form
+        })
+    else:
+        form = FeedbackForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data)
+            messages.success(request,"We received your feedback!")
+            form = FeedbackForm()
+
+        return render(request, "products/product.html", {
+            "product": product,
+            "form":form
+        })
+
+    
+    
